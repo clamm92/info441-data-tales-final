@@ -1,25 +1,15 @@
 {
-  "name": "info441-data-tales-final",
-  "version": "1.0.0",
+  "name": "express-starter",
+  "version": "0.0.0",
+  "private": true,
   "type": "module",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www.cjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/clamm92/info441-data-tales-final.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/clamm92/info441-data-tales-final/issues"
-  },
-  "homepage": "https://github.com/clamm92/info441-data-tales-final#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "cookie-parser": "^1.0.0",
+    "debug": "~2.6.9",
+    "express": "^4.21.0",
+    "morgan": "^1.10.1"
   }
 }
