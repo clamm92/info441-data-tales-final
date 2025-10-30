@@ -2,13 +2,11 @@
 
 # PROJECT DESCRIPTION
 
-## Who is your target audience?  
-Who do you envision using your application? Depending on the domain of your application, there may be a variety of audiences interested in using your application. You should hone in on one of these audiences.
+## Who is your target audience? 
 
 Our target audience is owners or restaurant managers who want stability and clarity within their restaurant. Having a site that easily shows tables, servers, and clients will help organize service. We just want one “management dashboard” that can be edited by staff to update information about the restaurant service. In summary our audience we are honing in on is restaurant staff.
 
 ## Why does your audience want to use your application?  
-Please provide some sort of reasoning.  
 
 Running a restaurant can be chaotic, especially during peak hours when keeping track of which tables are occupied, which servers are assigned where, and which clients are waiting can become confusing. Our application simplifies this process by offering a centralized dashboard that provides an instant overview of the dining floor. This helps managers make quick decisions, reduce confusion among servers, and improve the overall dining experience for customers. Ultimately, our product will improve efficiency and build customer satisfaction. 
 
