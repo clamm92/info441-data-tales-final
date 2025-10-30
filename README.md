@@ -14,6 +14,24 @@ Running a restaurant can be chaotic, especially during peak hours when keeping t
 
 We want to build a real-world application that utilizes the skills we’ve learned - namely Node.js, MongoDB, Express, and front-end development to build a full-stack application. We will gain experience designing, implementing, and managing a system with multiple interacting data models (tables, servers, clients). Additionally, real-time updates, usability, and data management are skills that are relevant to real-world software engineering challenges. 
 
+| Priority | User | Description | Technical Implementation |
+|-----------|------|--------------|---------------------------|
+| P0 | As a restaurant manager | I want to be able to create an account and log in/out. | Use **Azure Authentication** to authenticate users. On first login, store user information (Azure userId, name, email) in MongoDB. |
+| P0 | As a restaurant manager/server | I want to be able to view all tables and their current status. | Implement `GET /tables` to retrieve all tables and their status (occupied, available, assigned server) from MongoDB. |
+| P0 | As a restaurant manager/server | I want to be able to add new tables to the restaurant floor plan. | Implement `POST /tables` to create new tables with attributes (tableNumber, seats, location, assignedServerId) in MongoDB. |
+| P0 | As a restaurant manager/server | I want to be able to assign client groups to tables. | Implement `PUT /clients/{id}` to update a client’s `assignedTableId` and mark that table as occupied in MongoDB. |
+| P0 | As a restaurant manager/server | I want to be able to assign servers to specific tables. | Implement `PUT /tables/{id}` to update `assignedServerId` for a given table. Update the server’s `assignedTables` list accordingly. |
+| P1 | As a restaurant manager/server | I want to be able to view details for a specific table. | Implement `GET /tables/{id}` to return information about one table, including assigned server and occupancy status. |
+| P1 | As a restaurant manager/server | I want to be able to view all servers and their assigned tables. | Implement `GET /servers` to return all servers and their attributes from MongoDB. |
+| P1 | As a restaurant manager | I want to be able to add or remove servers. | Implement `POST /servers` to add new servers and `DELETE /servers/{id}` to remove servers from MongoDB. |
+| P1 | As a restaurant manager/server | I want to be able to add new client groups when customers arrive. | Implement `POST /clients` to create a new client record with details (partySize, notes, allergies). |
+| P1 | As a restaurant manager/server | I want to be able to delete tables or clients when they leave. | Implement `DELETE /tables/{id}` and `DELETE /clients/{id}` to remove entries from MongoDB. |
+| P2 | As a restaurant manager | I want to be able to reassign tables between servers during a shift. | Implement `PUT /tables/{id}` to update assigned server and modify both server and table data in MongoDB. |
+| P2 | As a restaurant manager | I want to be able to view which server is assigned to a specific table quickly. | Implement `GET /tables/{tableId}/server` to fetch the server assigned to that table. |
+| P2 | As a restaurant manager/server | I want to be able to update client details such as allergies or table changes. | Implement `PUT /clients/{id}` to modify client information in MongoDB. |
+| P3 | As a restaurant manager | I want to be able to view all current clients and their assigned tables. | Implement `GET /clients` to return all current clients with their table assignments. |
+
+
 ## Endpoints:
 
 **POST** `/user/login` - allows owner/manager login to account  
