@@ -45,8 +45,8 @@ We may come up with more as we develop.
 ## Users
 ```
 userId: (Number)
-name: String // name of restaurant
-email: String // email from Azure account
+name: (String) // name of restaurant
+email: (String) // email from Azure account
 ```
 
 ## Tables
